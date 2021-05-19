@@ -1,0 +1,26 @@
+{
+    "name": "hid-keyboard",
+    "description": "",
+    "dependencies": {
+        "microsoft-makeable": "*",
+        "jacdac": "github:microsoft/pxt-jacdac#v0.4.84",
+        "jacdac-hid-keyboard-server": "github:microsoft/pxt-jacdac/hid-keyboard-server#v0.4.84",
+        "jacdac-button": "github:microsoft/pxt-jacdac/button#v0.4.84"
+    },
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "targetVersions": {
+        "target": "0.15.12",
+        "targetId": "maker"
+    },
+    "supportedTargets": [
+        "maker"
+    ],
+    "preferredEditor": "tsprj"
+}
