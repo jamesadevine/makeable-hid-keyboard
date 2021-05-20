@@ -1,9 +1,6 @@
 const kbs = new servers.HIDKeyboardServer("KEY");
 servers.startServer(kbs);
 
-forever(function () {
-	
-})
 let held = false
 modules.button1.onUp(function() {
     if (held)
@@ -12,9 +9,8 @@ modules.button1.onUp(function() {
         keyboard.mediaKey(KeyboardMediaKey.PlayPause,KeyboardKeyEvent.Press)
 })
 modules.button1.onHold(function () {
+    if (held)
+        return
     held = true
-    keyboard.modifierKey(KeyboardModifierKey.ControlShift, KeyboardKeyEvent.Down);
-    keyboard.key("m", KeyboardKeyEvent.Down);
-    pause(20);
-    keyboard.clearAllKeys()
+    keyboard.mediaKey(KeyboardMediaKey.NextTrack, KeyboardKeyEvent.Press)
 })
